@@ -11,13 +11,22 @@ input.addEventListener("blur", function () {
   }
 });
 
+
+
+
+let oldScroll = window.scroll
+
 window.addEventListener("scroll", function () {
-  if (window.scrollY > 70) {
+  if (oldScroll = window.scrollY) {
     document.querySelector("nav").classList.add("shadow");
   } else {
     document.querySelector("nav").classList.remove("shadow");
   }
 });
+
+
+
+
 
 let slide2 = document.querySelector(".img-swiper");
 let btnPrevious2 = document.querySelector(".btn-previous2");
@@ -37,3 +46,19 @@ btnNext2.addEventListener("click", function () {
   slide2.scrollLeft -= 200;
   slide2.style.scrollBehavior = "smooth";
 });
+
+
+
+
+let day = document.querySelector(".day");
+let night = document.querySelector(".night");
+day.addEventListener("click", function () {
+  document.body.classList.add("active");
+});
+night.addEventListener("click", function () {
+  document.body.classList.remove("active");
+});
+
+
+
+
